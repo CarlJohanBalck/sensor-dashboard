@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import TemperatureChart from './component/TemperatureChart';
+import TemperatureChart from './components/TemperatureChart';
 
 
 function App() {
