@@ -19,7 +19,7 @@ const [sensorData, setSensorData] = useState<SensorDataEntry[]>([]);
   }, [])
   async function fetchIngredients() {
     try {
-      await axios.get('http://192.168.0.120:5001/daily-sensor-data').then(response => {
+      await axios.get('http://192.168.0.120:5005/daily-sensor-data').then(response => {
         setSensorData(response.data)
        
       })
