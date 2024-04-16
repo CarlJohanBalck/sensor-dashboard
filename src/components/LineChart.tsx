@@ -4,9 +4,10 @@ import Chart, { ChartConfiguration, ChartOptions } from 'chart.js/auto';
 interface LineChartProps {
   data: number[];
   labels: string[];
+  unit: string;
 }
 
-const LineChart: React.FC<LineChartProps> = ({ data, labels }) => {
+const LineChart: React.FC<LineChartProps> = ({ data, labels, unit }) => {
   const chartContainer = useRef<HTMLCanvasElement>(null);
   const chartInstance = useRef<Chart>();
 
@@ -24,7 +25,7 @@ const LineChart: React.FC<LineChartProps> = ({ data, labels }) => {
             labels: labels,
             datasets: [
               {
-                label: 'Line Chart',
+                label: unit,
                 data: data,
                 borderColor: 'rgb(75, 192, 192)',
                 tension: 0.4,

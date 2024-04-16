@@ -54,11 +54,11 @@ const [sensorData, setSensorData] = useState<SensorDataEntry[]>([]);
   return (
     <div>
       <h1>Temperature</h1>
-      <LineChart data={tempData} labels={tempLabels} />
+      <LineChart data={tempData} labels={tempLabels} unit="°C"/>
       <h1>Humidity</h1>
-      <LineChart data={humData} labels={tempLabels} />
+      <LineChart data={humData} labels={tempLabels} unit="%"/>
       <h1>Pressure</h1>
-      <LineChart data={pressData} labels={tempLabels} />
+      <LineChart data={pressData} labels={tempLabels} unit="hPa" />
     </div>
   );
 };
