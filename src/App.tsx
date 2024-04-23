@@ -28,7 +28,7 @@ const [error, setError] = useState<string | null>(null);
         setSensorData(response.data)
       })
       .catch(error => {
-        console.error('Error fetching stats:', error);
+        console.error('Error:', error);
         setError(error.message)
       });
   } catch (error) {
